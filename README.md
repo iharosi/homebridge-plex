@@ -1,6 +1,8 @@
-# Plex Plugin for Homebridge
-[![npm](https://img.shields.io/npm/v/homebridge-plex.svg)](https://www.npmjs.com/package/homebridge-plex)
-[![npm](https://img.shields.io/npm/dt/homebridge-plex.svg)](https://www.npmjs.com/package/homebridge-plex)
+# Plex v2 Plugin for Homebridge
+[![npm](https://img.shields.io/npm/v/homebridge-plex-v2.svg)](https://www.npmjs.com/package/homebridge-plex-v2)
+[![npm](https://img.shields.io/npm/dt/homebridge-plex-v2.svg)](https://www.npmjs.com/package/homebridge-plex-v2)
+
+This is a fork of [mpbzh](https://github.com/mpbzh)'s [Homebridge Plex](https://github.com/mpbzh/homebridge-plex) plugin.
 
 Use the active sessions on your Plex server as a sensor in Homebridge. Enable your cozy cinema light scene when Plex starts playing and go back to your normal lighting when playback stops.
 
@@ -9,7 +11,7 @@ Use the active sessions on your Plex server as a sensor in Homebridge. Enable yo
 You install the plugin the same way you installed Homebridge - as a global NPM module:
 
 ```bash
-sudo npm install -g homebridge-plex
+sudo npm install -g homebridge-plex-v2
 ```
 
 If you don't have a Homebridge installation yet, head over to the [project documetation](https://github.com/nfarina/homebridge) for more information.
@@ -27,7 +29,7 @@ Variable | Description
 `port` | The port of your Plex server. Defaults to `32400`
 `filter` | An array of filter rules. See [filtering sessions](#filtering-sessions)
 `polling_interval` | Interval in seconds in which the play state is checked. Default is `3`, lower values are discuraged.
-`debug` | Set this to true to receive detailed debug information about active sessions and filtering. This is not recommended for permanent installations as it [fills up your log files pretty quickly](https://github.com/mpbzh/homebridge-plex/issues/6).
+`debug` | Set this to true to receive detailed debug information about active sessions and filtering. This is not recommended for permanent installations as it fills up your log files pretty quickly.
 
 Typical config example:
 ```json

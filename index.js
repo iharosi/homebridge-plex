@@ -16,6 +16,7 @@ class Plex {
     this.plexToken = config.plex_token;
     this.host = config.host || 'localhost';
     this.port = config.port || '32400';
+    this.secure = config.secure || false;
     this.filter = config.filter || [];
     this.pollingInterval = config.polling_interval * 1000 || 3000;
     this.debug = config.debug || false;
@@ -45,7 +46,8 @@ class Plex {
 
   getState(callback) {
     const options = {
-      url: `http://${this.host}:${this.port}/status/sessions`,
+      url: `http${this.secure ? "s" : ""}://${this.host}:${this.port}/status/sessions`,
+      rejectUnauthorized: false, // Plex certificates are not signed for a nice hostname / IP
       headers: {
         'Accept': 'application/json',
         'X-Plex-Token': this.plexToken

@@ -46,7 +46,7 @@ class Plex {
 
   getState(callback) {
     const options = {
-      url: `http${this.secure ? "s" : ""}://${this.host}:${this.port}/status/sessions`,
+      url: `http${this.secure ? 's' : ''}://${this.host}:${this.port}/status/sessions`,
       rejectUnauthorized: false, // Plex certificates are not signed for a nice hostname / IP
       headers: {
         'Accept': 'application/json',

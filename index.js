@@ -14,9 +14,11 @@ class Plex {
     this.log = log;
     this.name = config.name;
     this.plexToken = config.plex_token;
+    this.protocol = config.secure ? 'https' : 'http';
     this.host = config.host || 'localhost';
     this.port = config.port || '32400';
     this.secure = config.secure || false;
+    this.certVerification = config.certVerification || false;
     this.filter = config.filter || [];
     this.pollingInterval = config.polling_interval * 1000 || 3000;
     this.debug = config.debug || false;
@@ -46,8 +48,8 @@ class Plex {
 
   getState(callback) {
     const options = {
-      url: `http${this.secure ? 's' : ''}://${this.host}:${this.port}/status/sessions`,
-      rejectUnauthorized: false, // Plex certificates are not signed for a nice hostname / IP
+      url: `${this.protocol}://${this.host}:${this.port}/status/sessions`,
+      rejectUnauthorized: this.certVerification,
       headers: {
         'Accept': 'application/json',
         'X-Plex-Token': this.plexToken

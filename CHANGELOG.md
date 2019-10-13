@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+# [1.2.0] - 2019-10-14
+### Added
+- Added HTTPS support
+
 ## [1.1.7] - 2019-03-07
 ### Changed
 - Bumping version for npm release
@@ -47,7 +51,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Added
 - Initial Release
 
-[Unreleased]: https://github.com/iharosi/homebridge-plex-v2/compare/master...dev
+[Unreleased]: https://github.com/iharosi/homebridge-plex-v2/compare/master...develop
+[1.2.0]: https://github.com/iharosi/homebridge-plex-v2/compare/v1.1.7...v1.2.0
 [1.1.7]: https://github.com/iharosi/homebridge-plex-v2/compare/v1.1.6...v1.1.7
 [1.1.6]: https://github.com/iharosi/homebridge-plex-v2/compare/v1.1.5...v1.1.6
 [1.1.5]: https://github.com/iharosi/homebridge-plex-v2/compare/v1.1.4...v1.1.5

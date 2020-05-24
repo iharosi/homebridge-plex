@@ -30,7 +30,8 @@ Variable | Description
 `filter` | An array of filter rules. See [filtering sessions](#filtering-sessions)
 `polling_interval` | Interval in seconds in which the play state is checked. Default is `3`, lower values are discuraged.
 `debug` | Set this to true to receive detailed debug information about active sessions and filtering. This is not recommended for permanent installations as it fills up your log files pretty quickly.
-`secure` | Set this to true if your Plex has Secure connections: **Required**. Defaults to `false` which will work with Preferred or Disabled.
+`secure` | Set this to true if secure connection has set to **required** in your Plex server. Defaults to `false`.
+`cert_verification` |  Set this to true to verifiy the server certificate of your Plex server against the list of supplied CAs in case secure connection has turned on. Should be false in case of self signed certificates. Defaults to `false`.
 
 Typical config example:
 ```json

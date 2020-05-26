@@ -129,5 +129,5 @@ module.exports = homebridge => {
   Service = homebridge.hap.Service;
   Characteristic = homebridge.hap.Characteristic;
 
-  homebridge.registerAccessory('homebridge-plex', 'Plex', Plex);
+  homebridge.registerAccessory('homebridge-plex-v2', 'Plex', Plex);
 };

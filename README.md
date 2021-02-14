@@ -1,3 +1,5 @@
+# ⚠️⚠️⚠️ This project has been discontinued in favor of [homebridge-plex-webhooks](https://github.com/iharosi/homebridge-plex-webhooks) ⚠️⚠️⚠️
+
 # Plex v2 Plugin for Homebridge
 [![npm](https://img.shields.io/npm/v/homebridge-plex-v2.svg)](https://www.npmjs.com/package/homebridge-plex-v2)
 [![npm](https://img.shields.io/npm/dt/homebridge-plex-v2.svg)](https://www.npmjs.com/package/homebridge-plex-v2)
